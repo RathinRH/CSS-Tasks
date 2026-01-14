@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Tables & Position</title>
+
+<style>
+/* ---------- TABLE STYLES ---------- */
+.table-container {
+    overflow-x: auto;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d9edf7;
+}
+
+/* ---------- POSITIONING ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Fixed Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 180px;
+    height: 100%;
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+/* Content Area */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* Relative & Absolute */
+.relative-box {
+    position: relative;
+    background: lightgray;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: orange;
+    padding: 10px;
+}
+
+/* Fixed Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Modal Popup */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid #333;
+    z-index: 2000;
+}
+</style>
+</head>
+
+<body>
+
+<header>Sticky Header</header>
+
+<div class="sidebar">
+    Fixed Sidebar
+</div>
+
+<div class="content">
+
+<h2>Styled Table</h2>
+
+<div class="table-container">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Amit</td>
+        <td>Developer</td>
+        <td>Active</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Riya</td>
+        <td>Designer</td>
+        <td>Active</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Rahul</td>
+        <td>Tester</td>
+        <td>Inactive</td>
+    </tr>
+</table>
+</div>
+
+<h2>Relative & Absolute Position</h2>
+
+<div class="relative-box">
+    This is a relative element
+    <div class="absolute-box">
+        Absolute inside relative
+    </div>
+</div>
+
+</div>
+
+<div class="modal">
+    Centered Popup / Modal
+</div>
+
+<footer>Fixed Footer</footer>
+
+</body>
+</html>
