@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation, Overflow & Inline-block</title>
+
+<style>
+/* ---------------- GENERAL ---------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------------- HORIZONTAL MENU ---------------- */
+.top-nav {
+    background: #333;
+    overflow: hidden;
+}
+
+.top-nav a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    background: #555;
+}
+
+/* ---------------- DROPDOWN MENU ---------------- */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 150px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ---------------- VERTICAL MENU ---------------- */
+.sidebar {
+    width: 180px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: 100%;
+    background: #222;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
+
+/* ---------------- RESPONSIVE NAV ---------------- */
+.menu-toggle {
+    display: none;
+    background: #333;
+    color: white;
+    padding: 14px;
+    cursor: pointer;
+}
+
+/* ---------------- OVERFLOW ---------------- */
+.box {
+    width: 300px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 20px;
+    overflow: auto;
+}
+
+.text-box {
+    width: 250px;
+    height: 60px;
+    overflow: hidden;
+    border: 2px dashed green;
+    padding: 5px;
+}
+
+.image-box {
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    border: 2px solid blue;
+}
+
+.image-box img {
+    width: 300px;
+}
+
+/* Dropdown overflow */
+.scroll-dropdown {
+    max-height: 80px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+}
+
+/* ---------------- INLINE-BLOCK ---------------- */
+.inline {
+    display: inline;
+    background: lightblue;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 60px;
+    background: lightgreen;
+}
+
+.block {
+    display: block;
+    background: lightcoral;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+    .top-nav a { display: none; }
+    .menu-toggle { display: block; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Responsive Toggle -->
+<div class="menu-toggle">☰ Menu</div>
+
+<!-- Horizontal Menu -->
+<div class="top-nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+
+    <div class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content scroll-dropdown">
+            <a href="#">Web Design</a>
+            <a href="#">Development</a>
+            <a href="#">SEO</a>
+            <a href="#">Testing</a>
+            <a href="#">Support</a>
+        </div>
+    </div>
+
+    <a href="#">Contact</a>
+</div>
+
+<!-- Vertical Menu -->
+<div class="sidebar">
+    <a href="#">Dashboard</a>
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+</div>
+
+<div style="margin-left:200px; padding:20px">
+
+<h2>Overflow Examples</h2>
+
+<div class="box">
+    This container has fixed dimensions. Extra content will scroll when it exceeds the height.
+</div>
+
+<div class="text-box">
+    This is a long text that will be clipped because overflow is hidden.
+</div>
+
+<div class="image-box">
+    <img src="https://via.placeholder.com/300">
+</div>
+
+<h2>Inline / Inline-block / Block</h2>
+
+<span class="inline">Inline</span>
+<span class="inline-block">Inline-block</span>
+<div class="block">Block</div>
+
+</div>
+
+</body>
+</html>
