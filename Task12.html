@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background and Borders</title>
+
+    <style>
+        /* Page background */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f8ff;
+            background-image: url("https://via.placeholder.com/1200x800");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 600px;
+            border: 3px solid #333;
+            border-radius: 10px;
+        }
+
+        /* Heading border */
+        h1 {
+            text-align: center;
+            border-bottom: 4px solid blue;
+            padding-bottom: 10px;
+        }
+
+        /* Paragraph border */
+        p {
+            border: 2px dashed green;
+            padding: 10px;
+            margin: 15px 0;
+        }
+
+        /* Button border */
+        button {
+            border: 2px solid red;
+            padding: 10px 20px;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Image border */
+        img {
+            display: block;
+            margin: 15px auto;
+            border: 5px double purple;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Background & Borders</h1>
+
+        <p>
+            This paragraph demonstrates dashed borders and background usage.
+        </p>
+
+        <button>Click Me</button>
+
+        <img src="https://via.placeholder.com/120" alt="Sample Image">
+    </div>
+
+</body>
+</html>
