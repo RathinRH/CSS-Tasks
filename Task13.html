@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin vs Padding</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            background-color: lightblue;
+
+            /* Padding on all sides */
+            padding: 20px;
+
+            /* Margin on all sides */
+            margin: 30px;
+
+            border: 2px solid blue;
+        }
+
+        .individual {
+            background-color: lightgreen;
+
+            /* Individual padding */
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+
+            /* Individual margin */
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+
+            border: 2px dashed green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Margin and Padding Example</h2>
+
+    <div class="box">
+        This box has equal margin and padding on all sides.
+    </div>
+
+    <div class="individual">
+        This box has different margin and padding on each side.
+    </div>
+
+</body>
+</html>
