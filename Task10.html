@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+
+    <style>
+        /* 1. Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Element Selector */
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        /* 3. Class Selector */
+        .box {
+            padding: 15px;
+            margin: 15px auto;
+            max-width: 400px;
+            border: 2px solid #007BFF;
+        }
+
+        /* 4. ID Selector */
+        #highlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* 5. Group Selector */
+        h2, p {
+            margin: 10px 0;
+        }
+
+        /* 6. Descendant Selector */
+        .box p {
+            color: #555;
+        }
+
+        /* 7. Child Selector */
+        .container > p {
+            color: darkred;
+        }
+
+        /* 8. Attribute Selector */
+        input[type="text"] {
+            border: 2px solid purple;
+            padding: 5px;
+        }
+
+        /* 9. Pseudo-class Selector */
+        a:hover {
+            color: orange;
+        }
+
+        /* 10. Pseudo-element Selector */
+        p::first-letter {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Selectors Demo</h1>
+
+    <div class="container">
+        <p>This paragraph is a direct child.</p>
+        <div class="box">
+            <p>This paragraph is inside a box.</p>
+            <p id="highlight">This paragraph uses ID selector.</p>
+        </div>
+    </div>
+
+    <h2>Form Example</h2>
+    <input type="text" placeholder="Text input">
+
+    <br><br>
+
+    <a href="#">Hover over this link</a>
+
+</body>
+</html>
